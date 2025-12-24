@@ -3,61 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archive View</title>
+    <title>Full Archive</title>
     <style>
         body {
-            margin: 0;
-            padding: 40px 0;
             background-color: #2e2e2e;
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 0;
+            padding: 20px 0;
             gap: 20px;
         }
 
         iframe {
-            width: 900px;         /* A4 Width roughly */
-            height: 1300px;       /* Height to fit content fully without scrolling */
-            background-color: white;
+            width: 900px;
+            /* Default large height to prevent cutting before JS loads */
+            height: 1800px; 
             border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+            display: block;
             overflow: hidden;
-        }
-
-        /* Responsive zoom for smaller screens */
-        @media (max-width: 950px) {
-            iframe {
-                transform: scale(0.8);
-                margin: -150px 0;
-            }
         }
     </style>
 </head>
 <body>
 
-    <iframe src="page1.html" scrolling="no"></iframe>
-    <iframe src="page2.html" scrolling="no"></iframe>
-    <iframe src="page3.html" scrolling="no"></iframe>
-    <iframe src="page4.html" scrolling="no"></iframe>
-    <iframe src="page5.html" scrolling="no"></iframe>
-    <iframe src="page6.html" scrolling="no"></iframe>
+    <!-- scrolling="no" hides the scrollbars -->
+    <iframe src="page1.html" scrolling="no" onload="resizeIframe(this)"></iframe>
+    <iframe src="page2.html" scrolling="no" onload="resizeIframe(this)"></iframe>
+    <iframe src="page3.html" scrolling="no" onload="resizeIframe(this)"></iframe>
+    <iframe src="page4.html" scrolling="no" onload="resizeIframe(this)"></iframe>
+    <iframe src="page5.html" scrolling="no" onload="resizeIframe(this)"></iframe>
+    <iframe src="page6.html" scrolling="no" onload="resizeIframe(this)"></iframe>
 
-    <!-- Optional Script: Auto-resize height based on content if running on a server -->
     <script>
-        window.addEventListener('load', function() {
-            const frames = document.querySelectorAll('iframe');
-            frames.forEach(frame => {
-                frame.onload = function() {
-                    try {
-                        // Attempt to resize to fit content exactly
-                        this.style.height = this.contentWindow.document.body.scrollHeight + 'px';
-                    } catch (e) {
-                        // If cross-origin error occurs (local files), it stays at CSS default (1300px)
-                        console.log("Auto-resize blocked by browser security (CORS). Using default height.");
-                    }
-                }
-            });
-        });
+        function resizeIframe(obj) {
+            try {
+                // This adjusts the height to fit the content inside exactly
+                obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+            } catch (e) {
+                console.log("Could not auto-resize due to browser security restrictions (CORS). Using default height.");
+            }
+        }
     </script>
 
 </body>
