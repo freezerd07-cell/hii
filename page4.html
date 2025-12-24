@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italiya Iqtisodiyoti Tarixi - 4-Sahifa (Vintage Style)</title>
+    <!-- Fonts - Same as Page 1, 2, 5, 6 -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* VINTAGE STYLES (MATCHING OTHER PAGES) */
+        body {
+            background-color: #2e2e2e;
+            display: flex;
+            justify-content: center;
+            font-family: 'Old Standard TT', serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .paper {
+            width: 900px;
+            background-color: #f3e9d2;
+            /* Vintage Texture Pattern */
+            background-image: linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, .05) 25%, rgba(0, 0, 0, .05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, .05) 75%, rgba(0, 0, 0, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, .05) 25%, rgba(0, 0, 0, .05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, .05) 75%, rgba(0, 0, 0, .05) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.7);
+            color: #1a1a1a;
+            position: relative;
+            min-height: 1250px;
+        }
+
+        /* Weathering overlay */
+        .paper::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle, transparent 40%, rgba(100, 80, 50, 0.2) 100%);
+            pointer-events: none;
+        }
+
+        /* HEADER */
+        header { text-align: center; border-bottom: 3px double #000; padding-bottom: 10px; margin-bottom: 20px; }
+        h1.masthead { font-family: 'UnifrakturMaguntia', cursive; font-size: 80px; margin: 0; line-height: 0.8; letter-spacing: 2px; }
+        .meta-info { border-top: 2px solid #000; border-bottom: 1px solid #000; display: flex; justify-content: space-between; padding: 5px 20px; font-family: 'Playfair Display', serif; font-size: 14px; font-weight: bold; margin-top: 15px; text-transform: uppercase; }
+
+        /* HEADLINES */
+        .headline-container { text-align: center; margin-bottom: 30px; }
+        .headline { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 900; line-height: 0.95; margin: 10px 0 15px 0; text-transform: uppercase; }
+        .sub-headline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 24px; margin-bottom: 15px; border-bottom: 1px solid #000; display: inline-block; padding-bottom: 5px; }
+
+        /* CONTENT GRID */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .text-col { text-align: justify; font-size: 16px; line-height: 1.45; column-count: 2; column-gap: 25px; }
+        .sidebar-col { text-align: justify; font-size: 14px; line-height: 1.35; background-color: rgba(0,0,0,0.05); padding: 15px; border: 1px solid #333; }
+
+        h3 { font-family: 'Playfair Display', serif; font-size: 19px; text-transform: uppercase; border-bottom: 2px solid #000; margin-top: 0; padding-bottom: 5px; font-weight: bold; }
+
+        /* VISUALS */
+        .photo-box { width: 100%; margin-bottom: 15px; border: 2px solid #000; padding: 4px; background: #fff; }
+        
+        /* YANGI QO'SHILGAN STIL: Rasmlar uchun */
+        .newspaper-img { width: 100%; height: auto; min-height: 200px; object-fit: cover; filter: grayscale(100%) contrast(1.2); display: block; }
+
+        .placeholder-img { 
+            background: repeating-linear-gradient(135deg, #777, #777 10px, #555 10px, #555 20px); 
+            height: 200px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-weight: bold; 
+            color: #fff; 
+            text-shadow: 1px 1px 2px #000; 
+            font-size: 20px;
+            font-family: 'Playfair Display';
+            text-align: center;
+        }
+        .caption { font-size: 13px; font-style: italic; text-align: center; margin-top: 5px; font-weight: bold; }
+
+        .drop-cap::first-letter { float: left; font-size: 3.8em; line-height: 0.8; padding-right: 8px; font-family: 'UnifrakturMaguntia', cursive; }
+        
+        /* SPECIAL BOXES */
+        .fashion-list {
+            border: 3px double #000;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .fashion-list ul { list-style: none; padding: 0; margin: 0; font-family: 'Playfair Display', serif; font-weight: bold; font-size: 16px; }
+        .fashion-list li { border-bottom: 1px dotted #555; padding: 5px 0; }
+
+        /* BOTTOM SECTION */
+        .bottom-section { display: flex; gap: 30px; align-items: flex-start; margin-top: 20px; }
+        .vintage-ad { flex: 1; border: 4px double #000; padding: 15px; text-align: center; font-family: sans-serif; display: flex; flex-direction: column; justify-content: center; }
+
+        .footer { text-align: center; border-top: 1px solid #000; margin-top: 30px; padding-top: 10px; font-size: 14px; font-weight: bold; text-transform: uppercase; }
+
+    </style>
+</head>
+<body>
+
+    <div class="paper">
+        <!-- Header -->
+        <header>
+            <h1 class="masthead">Tarixiy Iqtisodiyot</h1>
+            <div class="meta-info">
+                <span>Milan - Rim, 1980 - 1995</span>
+                <span>Mavzu: Made in Italy</span>
+            </div>
+        </header>
+
+        <!-- Main Headline -->
+        <div class="headline-container">
+            <h2 class="headline">"MADE IN ITALY" DUNYONI ZABT ETMOQDA</h2>
+            <div class="sub-headline">Brendlar Yuksalishi, Kichik Biznes G'alabasi va Yevropa Sari Yo'l</div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="main-grid">
+            <!-- Left: Main Article -->
+            <div style="border-right: 1px solid #aaa; padding-right: 25px;">
+                
+                <div class="photo-box">
+                    <!-- RASM QO'SHILDI -->
+                    <img src="image4.png" alt="Milan Moda Haftaligi" class="newspaper-img">
+                    <div class="caption">1985-yil: Milan moda haftaligi dunyo e'tibor markazida.</div>
+                </div>
+
+                <div class="text-col">
+                    <p class="drop-cap">1 970-yillardagi inqirozdan so'ng, Italiya iqtisodiyoti kutilmagan kuch bilan qayta tiklandi. Katta sanoat gigantlari qiyinchilikka uchragan bir paytda, mamlakatning shimoli-sharqiy hududlarida (Veneto, Emiliya-Romanya) <strong>"Uchinchi Italiya"</strong> modeli gullab-yashnadi.</p>
+                    
+                    <p>Minglab kichik va o'rta oilaviy korxonalar (SME) yuqori sifatli mahsulotlar ishlab chiqarishga ixtisoslashdi. Ular tezkor, moslashuvchan va innovatsion edilar. Bu davrda italyan kiyimlari, poyabzallari va mebellari dunyo bo'ylab hashamat ramziga aylandi.</p>
+
+                    <p><strong>Savdo Balansi:</strong> 1990-yillarga kelib, Italiya eksporti importdan oshib ketdi. Liraning qadrsizlanishi eksportni qo'llab-quvvatladi, ammo asosiy omil mahsulot sifati va dizayni edi. <em>"Bello e Ben Fatto"</em> (Chiroyli va Sifatli) tamoyili Italiya iqtisodiyotining yuragiga aylandi.</p>
+                </div>
+            </div>
+
+            <!-- Right: Sidebar Article -->
+            <div class="sidebar-col">
+                
+                <div class="fashion-list">
+                    <h4 style="margin: 0 0 10px 0; text-transform: uppercase; text-decoration: underline;">Global Brendlar</h4>
+                    <ul>
+                        <li>Giorgio Armani</li>
+                        <li>Gianni Versace</li>
+                        <li>Dolce & Gabbana</li>
+                        <li>Gucci & Prada</li>
+                        <li>Ferrari & Lamborghini</li>
+                    </ul>
+                </div>
+
+                <h3>Texnologiya: Olivetti</h3>
+                <p>Italiya faqat moda emas, balki texnologiyada ham yetakchi edi. <strong>Olivetti</strong> kompaniyasi dunyodagi ilk shaxsiy kompyuterlardan birini taqdim etdi. Afsuski, keyinchalik bu ustunlik boy berildi.</p>
+
+                <h3>Yevropa Ittifoqi Sari</h3>
+                <p>1992-yilda Maastrixt shartnomasi imzolandi. Italiya kelajakdagi yagona valyuta (Yevro) tizimiga qo'shilish majburiyatini oldi. Buning uchun davlat qarzini kamaytirish va inflyatsiyani jilovlash bo'yicha qat'iy talablar qo'yildi.</p>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+            <div style="flex: 3; text-align: justify;">
+                <h3>Xulosa: Oltin Davrning Yakuni</h3>
+                <p>1980-yillar Italiya uchun optimizm davri bo'ldi. Odamlar boyidi, turmush darajasi oshdi. Italiya YaIMi (GDP) bir muddat Buyuk Britaniyadan o'tib ketib, dunyodagi 5-iqtisodiyotga aylandi (bu voqea "Il Sorpasso" deb ataladi).</p>
+                <p>Biroq, davlat qarzi o'sishda davom etdi va siyosiy korrupsiya ("Tangentopoli" janjali) 90-yillarning boshida tizimni larzaga keltirdi. Bu esa keyingi sahifadagi (5-sahifa) katta o'zgarishlarga zamin yaratdi.</p>
+            </div>
+
+            <div class="vintage-ad">
+                <div style="border-bottom: 2px solid #000; margin-bottom: 5px;"><strong>REKLAMA</strong></div>
+                <h4 style="margin: 5px 0; font-size: 24px;">FERRARI F40</h4>
+                <div class="placeholder-img" style="height: 70px; background: #900; color: white; font-size: 16px;">TEZLIK RAMZI</div>
+                <p style="font-size: 12px; margin-top: 10px;">Dunyoning eng tez avtomobili.<br>Italiya muhandisligi mo'jizasi (1987).</p>
+            </div>
+        </div>
+
+        <!-- Footer Info -->
+        <div class="footer">
+            Sahifa 4 / 6
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italiya Iqtisodiyoti Tarixi - 5-Sahifa</title>
+    <!-- Fonts from Page 1 & 2 -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* VINTAGE STYLES (Based on Page 1) */
+        body {
+            background-color: #2e2e2e;
+            display: flex;
+            justify-content: center;
+            font-family: 'Old Standard TT', serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .paper {
+            width: 900px;
+            /* Same background texture as Page 1 */
+            background-color: #f3e9d2;
+            background-image: linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, .05) 25%, rgba(0, 0, 0, .05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, .05) 75%, rgba(0, 0, 0, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, .05) 25%, rgba(0, 0, 0, .05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, .05) 75%, rgba(0, 0, 0, .05) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.7);
+            color: #1a1a1a;
+            position: relative;
+            min-height: 1200px;
+        }
+
+        /* Weathering overlay */
+        .paper::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle, transparent 40%, rgba(100, 80, 50, 0.2) 100%);
+            pointer-events: none;
+        }
+
+        /* HEADER */
+        header { text-align: center; border-bottom: 3px double #000; padding-bottom: 10px; margin-bottom: 20px; }
+        h1.masthead { font-family: 'UnifrakturMaguntia', cursive; font-size: 80px; margin: 0; line-height: 0.8; letter-spacing: 2px; }
+        .meta-info { border-top: 2px solid #000; border-bottom: 1px solid #000; display: flex; justify-content: space-between; padding: 5px 20px; font-family: 'Playfair Display', serif; font-size: 14px; font-weight: bold; margin-top: 15px; text-transform: uppercase; }
+
+        /* HEADLINES */
+        .headline-container { text-align: center; margin-bottom: 30px; }
+        .headline { font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 900; line-height: 0.9; margin: 10px 0 15px 0; text-transform: uppercase; }
+        .sub-headline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 24px; margin-bottom: 15px; border-bottom: 1px solid #000; display: inline-block; padding-bottom: 5px; }
+
+        /* GRID LAYOUT */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .text-col { text-align: justify; font-size: 16px; line-height: 1.4; column-count: 2; column-gap: 25px; }
+        
+        /* SIDEBAR */
+        .sidebar-col { 
+            text-align: justify; 
+            font-size: 14px; 
+            line-height: 1.35; 
+            background-color: rgba(0,0,0,0.05); 
+            padding: 15px; 
+            border: 1px solid #333; 
+        }
+
+        h3 { font-family: 'Playfair Display', serif; font-size: 20px; text-transform: uppercase; border-bottom: 2px solid #000; margin-top: 0; padding-bottom: 5px; font-weight: bold; }
+
+        /* PHOTOS & GRAPHICS */
+        .photo-box { width: 100%; margin-bottom: 15px; border: 2px solid #000; padding: 4px; background: #fff; }
+        
+        /* YANGI QO'SHILGAN STIL: Rasmlar uchun */
+        .newspaper-img { width: 100%; height: auto; min-height: 220px; object-fit: cover; filter: grayscale(100%) contrast(1.1); display: block; }
+
+        .placeholder-img { 
+            background: repeating-linear-gradient(45deg, #bbb, #bbb 10px, #999 10px, #999 20px); 
+            height: 220px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-weight: bold; 
+            color: #fff; 
+            text-shadow: 1px 1px 2px #000; 
+            font-size: 24px;
+            font-family: 'Playfair Display';
+        }
+        .caption { font-size: 13px; font-style: italic; text-align: center; margin-top: 5px; font-weight: bold; }
+
+        /* SPECIAL ELEMENTS */
+        .drop-cap::first-letter { float: left; font-size: 3.8em; line-height: 0.8; padding-right: 8px; font-family: 'UnifrakturMaguntia', cursive; }
+        
+        .quote-box {
+            border-top: 4px double #000;
+            border-bottom: 4px double #000;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: bold;
+            font-style: italic;
+            background-color: rgba(0,0,0,0.03);
+        }
+
+        .exchange-box {
+            border: 3px solid #000;
+            padding: 10px;
+            text-align: center;
+            margin: 20px 0;
+            background: #fff;
+        }
+
+        /* BOTTOM SECTION */
+        .bottom-section { display: flex; gap: 30px; align-items: flex-start; margin-top: 20px; }
+        .vintage-ad { flex: 1; border: 4px double #000; padding: 15px; text-align: center; font-family: sans-serif; height: 100%; }
+
+        .footer { text-align: center; border-top: 1px solid #000; margin-top: 30px; padding-top: 10px; font-size: 14px; font-weight: bold; }
+
+    </style>
+</head>
+<body>
+
+    <div class="paper">
+        <!-- Header -->
+        <header>
+            <h1 class="masthead">Tarixiy Iqtisodiyot</h1>
+            <div class="meta-info">
+                <span>Rim, 1996 - 2011 Yillar</span>
+                <span>Mavzu: Yevro va Inqiroz</span>
+            </div>
+        </header>
+
+        <!-- Main Headline -->
+        <div class="headline-container">
+            <h2 class="headline">LIRA O'Z O'RNINI BO'SHATDI</h2>
+            <div class="sub-headline">Yangi Valyuta, Turg'unlik va 2011-yilgi Davlat Qarzi Inqirozi</div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="main-grid">
+            <!-- Left: Main Article -->
+            <div style="border-right: 1px solid #aaa; padding-right: 25px;">
+                
+                <div class="photo-box">
+                    <!-- RASM O'ZGARTIRILDI: image5.png qo'yildi -->
+                    <img src="image5.png" alt="Yevro tangasi va Lira bilan xayrlashuv" class="newspaper-img">
+                    <div class="caption">2002-yil 1-Yanvar: Italiya tarixida yangi sahifa ochildi.</div>
+                </div>
+
+                <div class="text-col">
+                    <p class="drop-cap">M ing yillikning boshida Italiya o'zining tarixiy valyutasi — Lira bilan xayrlashdi. Romano Prodi hukumati mamlakatni Yevropa Valyuta Ittifoqiga (Yevrozona) olib kirish uchun katta sa'y-harakatlarni amalga oshirdi. Maqsad: Germaniya kabi barqaror iqtisodiyotga ega bo'lish edi.</p>
+                    
+                    <p><strong>Narxlar Shoki:</strong> Garchi rasmiy statistika inflyatsiya past ekanligini ko'rsatsa-da, oddiy italyanlar uchun hayot qimmatlashdi. <em>"Mening 1000 liralik qahvam birdaniga 1 Yevro (deyarli 2000 lira) bo'lib qoldi"</em> degan noroziliklar oddiy holga aylandi. Yevro barqarorlik olib keldi, ammo xalqning xarid qobiliyatini pasaytirdi.</p>
+
+                    <p><strong>Yo'qotilgan O'n Yillik:</strong> 2000-yildan 2010-yilgacha Italiya iqtisodiyoti deyarli o'smadi (Yillik o'sish 0-1%). Bunga sabab qilib murakkab byurokratiya, sud tizimining sekinligi va innovatsiyalarning yetishmasligi ko'rsatildi. Bu davr iqtisodchilar tomonidan "Stagnatsiya" (Turg'unlik) deb ataldi.</p>
+                </div>
+
+                <div class="quote-box">
+                    "Biz xalqaro bozorlarda raqobatlashish uchun juda sekin va juda qimmatmiz."
+                </div>
+
+                <div class="text-col">
+                    <p><strong>2008-yilgi Global Inqiroz:</strong> AQShda boshlangan moliyaviy bo'ron Italiya sanoatiga qattiq zarba berdi. 2009-yilda YaIM 5% ga quladi. Eksportga qaram bo'lgan shimoliy zavodlar buyurtmalarsiz qoldi.</p>
+                </div>
+            </div>
+
+            <!-- Right: Sidebar Article -->
+            <div class="sidebar-col">
+                
+                <div class="exchange-box">
+                    <h4 style="margin: 0; text-transform: uppercase;">Rasmiy Kurs</h4>
+                    <h2 style="font-size: 36px; margin: 10px 0;">1 € = 1936.27 ₤</h2>
+                    <p style="font-size: 12px; margin: 0;">Bu raqam tarixga kirdi.</p>
+                </div>
+
+                <h3>2011: "Spread" Vahimasi</h3>
+                <p>2011-yil oxirida moliyaviy bozorlar Italiyaning o'z ulkan davlat qarzini to'lay olishiga shubha qila boshladi.</p>
+                <p><strong>"Spread" nima?</strong> Bu Germaniya va Italiya davlat obligatsiyalari foizlari o'rtasidagi farq. 2011-yilning noyabrida bu ko'rsatkich <strong>575 punktga</strong> yetdi. Bu bankrotlik yoqasi edi.</p>
+                
+                <div class="photo-box" style="border: 1px solid #000; margin-top: 15px;">
+                    <div class="placeholder-img" style="height: 120px; background: #555; font-size: 18px;">MARIO MONTI</div>
+                    <div class="caption">Texnokratlar hokimiyati</div>
+                </div>
+
+                <p>Silviyo Berluskoni iste'foga chiqishga majbur bo'ldi. Uning o'rnini professor <strong>Mario Monti</strong> egalladi. U "Salva Italia" (Italiyani Qutqarish) dasturini joriy etdi: soliqlarni oshirish va pensiya yoshini uzaytirish.</p>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+            <div style="flex: 3; text-align: justify;">
+                <h3>Xulosa: Ishonch Inqirozi</h3>
+                <p>1996-2011 yillar Italiya uchun katta umidlar (Yevro) bilan boshlanib, chuqur tushkunlik bilan yakunlandi. Mamlakat o'zining eksport modelini yangi global sharoitga (Xitoy raqobati) moslashtira olmadi. Davlat qarzi YaIMning 120% iga yetdi.</p>
+                <p>Ushbu qiyin davr yakunida Yevropa Markaziy Banki rahbari, italiyalik Mario Dragi 2012-yilda mashhur so'zlarni aytdi: <em>"Yevroni saqlab qolish uchun nima kerak bo'lsa, qilinadi"</em>. Bu Italiyani qutqarib qoldi.</p>
+            </div>
+
+            <div class="vintage-ad">
+                <div style="border-bottom: 2px solid #000; margin-bottom: 5px;"><strong>REKLAMA</strong></div>
+                <h4 style="margin: 10px 0; font-size: 20px;">PUNTO</h4>
+                <div class="placeholder-img" style="height: 80px; background: #333; color: white; font-size: 14px;">FIAT PUNTO</div>
+                <p style="font-size: 12px; margin-top: 10px;">Yangi asr avtomobili.<br>Tejamkor va Yevropacha.</p>
+            </div>
+        </div>
+
+        <!-- Footer Info -->
+        <div class="footer">
+            Sahifa 5 / 6
+        </div>
+
+    </div>
+
+</body>
+</html>

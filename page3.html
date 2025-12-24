@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italiya Iqtisodiyoti Tarixi - 3-Sahifa (Kengaytirilgan)</title>
+    <!-- Fonts for 1970s serious newspaper look -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lora:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* GLOBAL STYLES */
+        body {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .paper {
+            width: 900px;
+            min-height: 1300px; /* Increased height */
+            background-color: #e8e4d9; /* Aged newsprint color */
+            /* Subtle texture */
+            background-image: linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+            background-size: 20px 20px;
+            padding: 45px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.9);
+            color: #1a1a1a;
+            position: relative;
+        }
+
+        /* HEADER SECTION */
+        header {
+            border-bottom: 4px double #000;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .top-meta {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Special Elite', monospace;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        h1.main-headline {
+            font-family: 'Cinzel', serif;
+            font-size: 68px;
+            font-weight: 900;
+            line-height: 0.9;
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .sub-headline {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            background: #000;
+            color: #fff;
+            display: inline-block;
+            padding: 5px 15px;
+        }
+
+        /* LAYOUT GRID */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2.2fr 1fr; /* Left main, Right sidebar */
+            gap: 35px;
+        }
+
+        /* LEFT COLUMN STYLES */
+        .article-lead {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            border-bottom: 1px solid #999;
+            padding-bottom: 15px;
+        }
+
+        .two-col-text {
+            column-count: 2;
+            column-gap: 25px;
+            text-align: justify;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            border-bottom: 2px solid #000;
+            margin-top: 25px;
+            font-size: 20px;
+        }
+
+        /* PHOTOS */
+        .photo-frame {
+            border: 1px solid #000;
+            padding: 4px;
+            background: #fff;
+            margin: 15px 0;
+            break-inside: avoid;
+        }
+        
+        /* YANGI QO'SHILGAN STIL: Rasmlar uchun */
+        .newspaper-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            /* 70-yillar uslubi: Oq-qora, yuqori kontrast va biroz sepia */
+            filter: grayscale(100%) contrast(1.2) sepia(10%);
+            display: block;
+        }
+
+        .photo-placeholder {
+            background: repeating-linear-gradient(135deg, #555, #555 5px, #444 5px, #444 10px);
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            text-shadow: 2px 2px 0 #000;
+        }
+        .caption {
+            font-size: 12px;
+            font-style: italic;
+            margin-top: 5px;
+            border-top: 1px solid #ccc;
+            padding-top: 3px;
+        }
+
+        /* RIGHT SIDEBAR STYLES */
+        .sidebar-box {
+            border: 2px solid #000;
+            padding: 15px;
+            background-color: #dcd6c5;
+            margin-bottom: 25px;
+        }
+        
+        .sidebar-title {
+            text-align: center;
+            font-family: 'Special Elite', monospace;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px dotted #000;
+            padding: 5px 0;
+            font-size: 13px;
+        }
+
+        /* BOTTOM SECTION */
+        .bottom-feature {
+            margin-top: 30px;
+            border-top: 4px solid #000;
+            padding-top: 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .quote-box {
+            font-size: 22px;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #000;
+            background: #fff;
+            margin: 20px 0;
+            box-shadow: 5px 5px 0 #888;
+        }
+
+        /* SPECIAL HIGHLIGHT */
+        .highlight-text {
+            background-color: rgba(255, 255, 0, 0.1);
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 40px;
+            border-top: 2px solid #000;
+            padding-top: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="paper">
+        <!-- Header -->
+        <header>
+            <div class="top-meta">
+                <span>RIM, MILAN, TURIN</span>
+                <span>1964 - 1979 Yillar Xronikasi</span>
+                <span>3-SAHIFA</span>
+            </div>
+            <h1 class="main-headline">INQIROZ VA O'ZGARISH</h1>
+            <div class="sub-headline">Iqtisodiy Mo'jizaning Yakuni & Ijtimoiy Ziddiyatlar</div>
+        </header>
+
+        <div class="content-wrapper">
+            <!-- Left Main Column -->
+            <div>
+                <p class="article-lead">
+                    "La Dolce Vita" (Shirin hayot) davri o'z nihoyasiga yetdi. 1960-yillarning oxiriga kelib, Italiya iqtisodiyoti o'z tarixidagi eng og'ir sinovlarga duch keldi. Ishchilar namoyishlari, neft narxining oshishi va siyosiy terror mamlakatni "turg'unlik" (stagflatsiya) botqog'iga tortdi.
+                </p>
+
+                <div class="two-col-text">
+                    <!-- Section 1 -->
+                    <h3>1. "Qaynoq Kuz" (1969)</h3>
+                    <p>Iqtisodiy mo'jiza yillarida (1950-60lar) oylik maoshlar past ushlab turilgan edi. Bu esa eksportni rivojlantirishga yordam berdi. Ammo 1969-yilga kelib, shimoliy zavodlardagi millionlab ishchilarning sabri tugadi.</p>
+                    
+                    <p>Kuz faslida metallurgiya va avtomobilsozlik sohasida misli ko'rilmagan ish tashlashlar boshlandi. Bu davr tarixga <strong>"Autunno Caldo"</strong> (Qaynoq Kuz) nomi bilan kirdi.</p>
+
+                    <div class="photo-frame">
+                        <!-- RASM QO'SHILDI -->
+                        <img src="image3.png" alt="Ish tashlashlar 1969" class="newspaper-img">
+                        <div class="caption">1969-yil: Turin ko'chalarida Fiat ishchilari va talabalar birlashmoqda.</div>
+                    </div>
+
+                    <p><strong>Natija:</strong> 1970-yilda "Ishchilar Nizomi" (Statuto dei Lavoratori) qabul qilindi. Bu qonun ishchilarga keng huquqlar berdi, ammo tadbirkorlar uchun ishchi kuchini qimmatlashtirdi. Italiya sanoati endi "arzon ishchi kuchi" ustunligini yo'qotdi.</p>
+
+                    <!-- Section 2 -->
+                    <h3>2. Neft Shoki va "Austerity" (1973)</h3>
+                    <p>1973-yilda Arab-Isroil urushi sababli OPEK davlatlari neft narxini keskin oshirdi. Italiya o'z energiyasining 80% qismini import qilar edi. Bu iqtisodiyot uchun falokat bo'ldi.</p>
+                    
+                    <p>Hukumat favqulodda <span class="highlight-text">"Austerity" (Tejamkorlik)</span> dasturini e'lon qildi:</p>
+                    <ul>
+                        <li>Yakshanba kunlari shaxsiy avtomobil haydash butunlay taqiqlandi.</li>
+                        <li>Kinoteatr va restoranlar soat 22:00 da yopilishi shart qilindi.</li>
+                        <li>Ko'cha chiroqlari xiralashtirildi.</li>
+                    </ul>
+                    <p>Bu davrda Rim va Milan ko'chalarida odamlar velosipedda yoki piyoda yurgan tarixiy suratlar muhrlanib qoldi. Sanoat ishlab chiqarishi to'xtab qoldi.</p>
+
+                    <!-- Section 3 -->
+                    <h3>3. Inflyatsiya va "Scala Mobile"</h3>
+                    <p>Narxlar oshishiga qarshi kurashish uchun kasaba uyushmalari <strong>"Scala Mobile"</strong> (Sirpanuvchi Narxlar) tizimini joriy etishga erishdilar. Bu tizimga ko'ra, agar inflyatsiya oshsa, ishchilarning oyligi avtomatik ravishda oshardi.</p>
+                    <p>Biroq, bu iqtisodiy xato bo'lib chiqdi. Oyliklar oshgani sari, kompaniyalar mahsulot narxini oshirdi. Bu yana inflyatsiyani keltirib chiqardi. 1970-yillarning oxiriga kelib, inflyatsiya <strong>21% ga</strong> yetdi. Lira qadrsizlandi.</p>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div style="padding-top: 10px;">
+                <!-- Box 1: Stats -->
+                <div class="sidebar-box">
+                    <div class="sidebar-title">RAQAMLAR SO'ZLAGANDA</div>
+                    <div class="stat-row">
+                        <span>Yillik Inflyatsiya (1974)</span>
+                        <strong>19.1%</strong>
+                    </div>
+                    <div class="stat-row">
+                        <span>Neft Narxi O'sishi</span>
+                        <strong>+400%</strong>
+                    </div>
+                    <div class="stat-row">
+                        <span>Ishsizlik</span>
+                        <strong>Oshib bormoqda</strong>
+                    </div>
+                    <div class="stat-row">
+                        <span>Lira kursi</span>
+                        <strong>Devalvatsiya</strong>
+                    </div>
+                    <p style="font-size: 11px; margin-top: 10px;"><em>Manba: Bank of Italy, 1970s archive.</em></p>
+                </div>
+
+                <!-- Box 2: Politics -->
+                <div class="sidebar-box" style="background-color: #333; color: #fff; border: none;">
+                    <div class="sidebar-title" style="color: #fff; border-bottom: 1px solid #777; padding-bottom: 5px;">ANNI DI PIOMBO</div>
+                    <h4 style="margin: 5px 0; color: #ff5555; text-align: center;">"Qo'rg'oshin Yillari"</h4>
+                    <p style="font-size: 13px; text-align: justify;">
+                        Siyosiy terror iqtisodiyotni bo'g'ib qo'ydi. "Qizil Brigadalar" (Brigate Rosse) tomonidan sanoatchilar va siyosatchilar o'g'irlab ketildi.
+                    </p>
+                    <div class="photo-frame" style="border: 1px solid #fff;">
+                        <div class="photo-placeholder" style="height: 100px; font-size: 14px; background: #555;">ALDO MORO</div>
+                    </div>
+                    <p style="font-size: 12px;">1978-yil: Sobiq Bosh vazir Aldo Moroning o'ldirilishi xorijiy investorlarni Italiyadan qochishga majbur qildi.</p>
+                </div>
+
+                <!-- Box 3: Fiat Crisis -->
+                <div class="sidebar-box">
+                    <div class="sidebar-title">FIAT INQIROZI</div>
+                    <p style="font-size: 13px;">Janni Anelli (Gianni Agnelli) Fiatni boshqarishda qiyinchilikka uchradi. Zavodlarda intizom yo'qoldi, sabotaj holatlari ko'paydi. 1976-yilda Fiat Liviya hukumatidan sarmoya olishga majbur bo'ldi.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal Break - Quote -->
+        <div class="quote-box">
+            "Biz juda tez yugurdik, endi esa nafasimizni rostlab olishimiz kerak. <br>Ammo narx juda qimmatga tushmoqda."
+        </div>
+
+
+        <!-- Footer -->
+        <div class="footer">
+           Sahifa 3 / 6
+        </div>
+
+    </div>
+
+</body>
+</html>

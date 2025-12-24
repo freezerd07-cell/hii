@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italiya Iqtisodiyoti Tarixi - 6-Sahifa (Yakuniy)</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* VINTAGE STYLES (MATCHING PAGES 1, 2, 5) */
+        body {
+            background-color: #2e2e2e;
+            display: flex;
+            justify-content: center;
+            font-family: 'Old Standard TT', serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .paper {
+            width: 900px;
+            background-color: #f3e9d2;
+            background-image: linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, .05) 25%, rgba(0, 0, 0, .05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, .05) 75%, rgba(0, 0, 0, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, .05) 25%, rgba(0, 0, 0, .05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, .05) 75%, rgba(0, 0, 0, .05) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.7);
+            color: #1a1a1a;
+            position: relative;
+            min-height: 1250px;
+        }
+
+        .paper::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle, transparent 40%, rgba(100, 80, 50, 0.2) 100%);
+            pointer-events: none;
+        }
+
+        /* HEADER */
+        header { text-align: center; border-bottom: 3px double #000; padding-bottom: 10px; margin-bottom: 20px; }
+        h1.masthead { font-family: 'UnifrakturMaguntia', cursive; font-size: 80px; margin: 0; line-height: 0.8; letter-spacing: 2px; }
+        .meta-info { border-top: 2px solid #000; border-bottom: 1px solid #000; display: flex; justify-content: space-between; padding: 5px 20px; font-family: 'Playfair Display', serif; font-size: 14px; font-weight: bold; margin-top: 15px; text-transform: uppercase; }
+
+        /* HEADLINES */
+        .headline-container { text-align: center; margin-bottom: 30px; }
+        .headline { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 900; line-height: 0.95; margin: 10px 0 15px 0; text-transform: uppercase; }
+        .sub-headline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 24px; margin-bottom: 15px; border-bottom: 1px solid #000; display: inline-block; padding-bottom: 5px; }
+
+        /* CONTENT GRID */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .text-col { text-align: justify; font-size: 16px; line-height: 1.45; column-count: 2; column-gap: 25px; }
+        .sidebar-col { text-align: justify; font-size: 14px; line-height: 1.35; background-color: rgba(0,0,0,0.05); padding: 15px; border: 1px solid #333; }
+
+        h3 { font-family: 'Playfair Display', serif; font-size: 19px; text-transform: uppercase; border-bottom: 2px solid #000; margin-top: 0; padding-bottom: 5px; font-weight: bold; }
+
+        /* VISUALS */
+        .photo-box { width: 100%; margin-bottom: 15px; border: 2px solid #000; padding: 4px; background: #fff; }
+        
+        /* YANGI QO'SHILGAN STIL: Rasmlar uchun */
+        .newspaper-img { width: 100%; height: auto; min-height: 200px; object-fit: cover; filter: grayscale(100%) contrast(1.1); display: block; }
+
+        .placeholder-img { 
+            background: repeating-linear-gradient(135deg, #444, #444 10px, #222 10px, #222 20px); 
+            height: 200px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-weight: bold; 
+            color: #fff; 
+            text-shadow: 1px 1px 2px #000; 
+            font-size: 20px;
+            font-family: 'Playfair Display';
+            text-align: center;
+        }
+        .caption { font-size: 13px; font-style: italic; text-align: center; margin-top: 5px; font-weight: bold; }
+
+        .pnrr-badge {
+            border: 3px double #000;
+            padding: 10px;
+            text-align: center;
+            margin: 20px 0;
+            background: #fff;
+        }
+
+        .drop-cap::first-letter { float: left; font-size: 3.8em; line-height: 0.8; padding-right: 8px; font-family: 'UnifrakturMaguntia', cursive; }
+        
+        /* BOTTOM SECTION */
+        .bottom-section { display: flex; gap: 30px; align-items: flex-start; margin-top: 20px; }
+        .modern-ad { flex: 1; border: 2px solid #000; padding: 10px; text-align: center; font-family: sans-serif; display: flex; flex-direction: column; justify-content: center; }
+
+        .footer { text-align: center; border-top: 1px solid #000; margin-top: 30px; padding-top: 10px; font-size: 14px; font-weight: bold; text-transform: uppercase; }
+
+    </style>
+</head>
+<body>
+
+    <div class="paper">
+        <!-- Header -->
+        <header>
+            <h1 class="masthead">Tarixiy Iqtisodiyot</h1>
+            <div class="meta-info">
+                <span>Rim - Milan, 2012 - 2025</span>
+                <span>Mavzu: Tiklanish va Kelajak</span>
+            </div>
+        </header>
+
+        <!-- Main Headline -->
+        <div class="headline-container">
+            <h2 class="headline">PANDEMIYA ZARBASI VA YANGI UYG'ONISH</h2>
+            <div class="sub-headline">Sanoat 4.0, COVID-19 va PNRR: Italiyaning Qayta Tug'ilishi</div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="main-grid">
+            <!-- Left: Main Article -->
+            <div style="border-right: 1px solid #aaa; padding-right: 25px;">
+                
+                <div class="photo-box">
+                    <!-- RASM O'ZGARTIRILDI: image6.png qo'shildi -->
+                    <img src="image6.png" alt="Bo'sh Rim ko'chalari va Covid-19" class="newspaper-img">
+                    <div class="caption">2020-yil, Mart: Italiya dunyoda birinchi bo'lib to'liq "Lockdown" e'lon qildi.</div>
+                </div>
+
+                <div class="text-col">
+                    <p class="drop-cap">2 012-yildan keyin Italiya sekin bo'lsa-da, barqarorlikka qayta boshladi. Hukumat <strong>"Industria 4.0"</strong> dasturini ishga tushirib, zavodlarni raqamlashtirish va robotlashtirish uchun soliq imtiyozlari berdi. Bu eksportni kuchaytirdi.</p>
+                    
+                    <p><strong>Qora Yil (2020):</strong> Biroq, 2020-yilning boshida kutilmagan ofat yuz berdi. COVID-19 pandemiyasi G'arb davlatlari orasida birinchi bo'lib Italiyaga zarba berdi. Iqtisodiyot butkul to'xtadi. Sayyohlik (YaIMning 13%) nolga tushdi. O'sha yili iqtisodiyot <strong>-9.0% ga</strong> quladi. Bu urush davridan keyingi eng yomon ko'rsatkich edi.</p>
+
+                    <p><strong>Katta Qaytish (2021-2022):</strong> Mario Dragi boshchiligidagi hukumat ishonchni tikladi. Qurilish sektori "Superbonus 110%" (uylarni tekinga ta'mirlash) dasturi orqali portlash darajasida o'sdi. 2021-yilda YaIM <strong>+6.6% ga</strong> o'sib, Yevropadagi eng tez tiklangan davlatlardan biri bo'ldi.</p>
+                </div>
+            </div>
+
+            <!-- Right: Sidebar Article -->
+            <div class="sidebar-col">
+                
+                <div class="pnrr-badge">
+                    <h4 style="margin: 0; font-size: 18px;">NEXT GENERATION EU</h4>
+                    <h1 style="font-size: 42px; margin: 5px 0; border-bottom: 2px solid #000; border-top: 2px solid #000;">€191.5 Mrd</h1>
+                    <p style="font-size: 12px; margin: 5px 0;">Yevropa Ittifoqidan Italiyani qutqarish uchun ajratilgan tarixiy mablag'.</p>
+                </div>
+
+                <h3>PNRR: Kelajak Rejasi</h3>
+                <p>Yevropa Ittifoqi Italiyaga misli ko'rilmagan yordam paketini (PNRR) taqdim etdi. Bu mablag'lar faqat qarzni yopish uchun emas, balki kelajakni qurish uchun sarflanmoqda:</p>
+                <ul style="padding-left: 20px; margin-top: 5px;">
+                    <li><strong>Yashil Energiya:</strong> Quyosh va shamol energiyasiga o'tish.</li>
+                    <li><strong>Raqamlashtirish:</strong> Internet tezligini oshirish va davlat xizmatlarini elektronlashtirish.</li>
+                    <li><strong>Tez Yurar Poyezdlar:</strong> Janubiy Italiyaga yangi temir yo'llar.</li>
+                </ul>
+                <p>Bu Italiya uchun "ikkinchi Marshall rejasi" deb atalmoqda.</p>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+            <div style="flex: 3; text-align: justify;">
+                <h3>Xulosa: Bugungi Kun (2025)</h3>
+                <p>Bugungi kunda Italiya Yevropaning 2-chi yirik sanoat davlati mavqeini saqlab turibdi. <strong>"Made in Italy"</strong> eksporti rekord darajaga yetdi (600 mlrd yevrodan oshdi). Biroq muammolar hamon mavjud: aholining qarishi, ishchi kuchi yetishmasligi va yuqori davlat qarzi.</p>
+                <p>Shunga qaramay, italyan ruhiyati — <em>"Resilienza"</em> (bardoshlilik) — mamlakatni yana bir bor inqirozdan olib chiqdi. Qadimgi Rim xarobalari orasida zamonaviy texnologiyalar rivojlanmoqda.</p>
+            </div>
+
+            <div class="modern-ad">
+                <div style="border-bottom: 2px solid #000; margin-bottom: 5px;"><strong>TRANSPORT</strong></div>
+                <h4 style="margin: 5px 0;">FRECCIAROSSA 1000</h4>
+                <div class="placeholder-img" style="height: 60px; background: #900; color: white; font-size: 14px;">360 km/soat</div>
+                <p style="font-size: 11px; margin-top: 8px;">Rimdan Milanga 2 soat 59 daqiqada.<br>Italiya muhandisligi cho'qqisi.</p>
+            </div>
+        </div>
+
+        <!-- Footer Info -->
+        <div class="footer">
+            SAHIFA 6 / 6
+        </div>
+
+    </div>
+
+</body>
+</html>
